@@ -1,0 +1,67 @@
+dn: dc=portaleaq,dc=com
+objectclass: top
+objectclass: domain
+objectclass: extensibleObject
+dc: portaleaq
+
+dn: ou=groups,dc=portaleaq,dc=com
+objectclass: top
+objectclass: organizationalUnit
+ou: groups
+
+dn: ou=people,dc=portaleaq,dc=com
+objectclass: top
+objectclass: organizationalUnit
+ou: people
+
+dn: uid=ben,ou=people,dc=portaleaq,dc=com
+objectclass: top
+objectclass: person
+objectclass: organizationalPerson
+objectclass: inetOrgPerson
+cn: Ben Alex
+sn: Alex
+uid: ben
+userPassword: {SHA}nFCebWjxfaLbHHG1Qk5UU4trbvQ=
+description: Brazil, eaq, Ben Alex
+telephoneNumber: +46 555-123456
+
+dn: uid=bob,ou=people,dc=portaleaq,dc=com
+objectclass: top
+objectclass: person
+objectclass: organizationalPerson
+objectclass: inetOrgPerson
+cn: Bob Hamilton
+sn: Hamilton
+uid: bob
+userPassword: bobspassword
+description: Brazil, eaq, Bob Hamilton
+telephoneNumber: +55 86 99494-1111
+
+dn: uid=joe,ou=people,dc=portaleaq,dc=com
+objectclass: top
+objectclass: person
+objectclass: organizationalPerson
+objectclass: inetOrgPerson
+cn: Joe Smeth
+sn: Smeth
+uid: joe
+userPassword: joespassword
+description: Brazil, eaq, Joe Smeth
+telephoneNumber: +55 86 99411-9393
+
+dn: cn=ROLE_USER,ou=groups,dc=portaleaq,dc=com
+objectclass: top
+objectclass: groupOfUniqueNames
+cn: ROLE_USER
+ou: developer
+uniqueMember: uid=ben,ou=people,dc=portaleaq,dc=com
+uniqueMember: uid=bob,ou=people,dc=portaleaq,dc=com
+uniqueMember: uid=joe,ou=people,dc=portaleaq,dc=com
+
+dn: cn=ROLE_ADMIN,ou=groups,dc=portaleaq,dc=com
+objectclass: top
+objectclass: groupOfUniqueNames
+cn: ROLE_ADMIN
+ou: manager
+uniqueMember: uid=ben,ou=people,dc=portaleaq,dc=com
